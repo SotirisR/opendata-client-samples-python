@@ -15,6 +15,8 @@ in a production system and it breaks, it's your fault :)
 
 """
 
+#MPORO NA KANO REFACTORING ME __MAIN__ KAI TIS ANTISTOIXES SYANRTHSEIS NA TREXOUN MESA STH MAIN?
+
 import json
 import requests
 from requests.auth import HTTPBasicAuth
@@ -232,8 +234,9 @@ class OpendataClient(object):
         Arguments:
         signer_id: signer uid
         """
-        return self._get_resource('/signers/{0}/'.format(signer_id))
-    
+        return self._get_resource('/signers/{0}/'.format(signer_id)) #edo vlepo mhpos allaxo to print - apo design patterns-print
+
+
     
     def get_decision(self, ada):
         """Returns the decision with the specified ada.
@@ -241,7 +244,7 @@ class OpendataClient(object):
         Arguments:
         ada: decision identifier
         """
-        return self._get_resource('/decisions/{0}/'.format(ada))
+        return self._get_resource('/decisions/{0}/'.format(ada)) #edo vlepo mhpos allaxo to print - apo design patterns-print
     
     
     def get_decision_version(self, version_id):

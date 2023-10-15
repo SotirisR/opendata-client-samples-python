@@ -27,19 +27,19 @@ att1.close()
 
 if response.status_code == 200:
     decision = response.json()
-    print "ΑΔΑ: " + decision['ada'].encode('utf8')
+    print( "ΑΔΑ: " + decision['ada'].encode('utf8'))
 elif response.status_code == 400:
     print(str(response.status_code))
-    print "Σφάλμα στην υποβολή της πράξης"
+    print( "Σφάλμα στην υποβολή της πράξης")
     err_json = response.json()
     for err in err_json['errors']:
         print("{0}: {1}".format(err['errorCode'], err['errorMessage'].encode('utf8')))
 elif response.status_code == 401:
     print(str(response.status_code))
-    print "Σφάλμα αυθεντικοποίησης"
+    print( "Σφάλμα αυθεντικοποίησης")
 elif response.status_code == 403:
     print(str(response.status_code))
-    print "Απαγόρευση πρόσβασης"
+    print ("Απαγόρευση πρόσβασης")
 else:
     print("ERROR " + str(response.status_code))
 

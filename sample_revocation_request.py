@@ -16,13 +16,13 @@ response = client.submit_revocation_request(ada, comment)
 
 if response.status_code == 200:
     decision = response.json()
-    print "Το αίτημα ανάκλησης έχει υποβληθεί."
+    print( "Το αίτημα ανάκλησης έχει υποβληθεί.")
 elif response.status_code == 400:
-    print "Σφάλμα στην υποβολή της πράξης"
+    print ("Σφάλμα στην υποβολή της πράξης")
 elif response.status_code == 401:
-    print str(response.status_code) + " Σφάλμα αυθεντικοποίησης"
+    print (str(response.status_code) + " Σφάλμα αυθεντικοποίησης")
 elif response.status_code == 403:
-    print str(response.status_code) + " Απαγόρευση πρόσβασης"
+    print (str(response.status_code) + " Απαγόρευση πρόσβασης")
 else:
     print("ERROR " + str(response.status_code))
 
