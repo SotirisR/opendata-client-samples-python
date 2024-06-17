@@ -15,7 +15,7 @@ in a production system and it breaks, it's your fault :)
 
 """
 
-#MPORO NA KANO REFACTORING ME __MAIN__ KAI TIS ANTISTOIXES SYANRTHSEIS NA TREXOUN MESA STH MAIN?
+
 
 import json
 import requests
